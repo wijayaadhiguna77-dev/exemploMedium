@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adhi Guna | Personal Profile</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #080d18;
+            color: #ffffff;
+        }
+
+        /* NAVBAR */
+        header {
+            width: 100%;
+            padding: 22px 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0b1220;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 10%;
+            gap: 50px;
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h3 {
+            color: #38bdf8;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .home-content h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .home-content h1 span {
+            color: #38bdf8;
+        }
+
+        .home-content p {
+            color: #94a3b8;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 13px 28px;
+            background: #38bdf8;
+            color: #080d18;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            transform: translateY(-4px);
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            box-shadow: 0 0 35px #0ea5e966;
+        }
+
+        /* SECTION UMUM */
+        section {
+            padding: 85px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #0c1526;
+        }
+
+        .about-card {
+            max-width: 750px;
+            margin: auto;
+            padding: 35px;
+            background: #111c30;
+            border: 1px solid #1e3a5f;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .about-card p {
+            color: #cbd5e1;
+            line-height: 2;
+        }
+
+        /* BIODATA */
+        .biodata {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .biodata div {
+            background: #0b1220;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .biodata strong {
+            color: #38bdf8;
+        }
+
+        /* SKILLS */
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 30px 20px;
+            text-align: center;
+            background: #111c30;
+            border-radius: 12px;
+            border: 1px solid #1e3a5f;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #0c1526;
+            text-align: center;
+        }
+
+        .contact p {
+            color: #94a3b8;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #080d18;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .home-content h1 {
+                font-size: 36px;
+            }
+
+            .profile-img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .skill-container {
+                grid-template-columns: 1fr;
+            }
+
+            .biodata {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">ADHI GUNA WIJAYA.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HOME -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h3>HELLO, WELCOME TO MY WEBSITE</h3>
+
+            <h1>Saya <span>Adhi Guna</span></h1>
+
+            <p>
+                Selamat datang di website pribadi saya.
+                Saya adalah seorang pelajar atau mahasiswa yang 
+                memiliki ketertarikan dalam dunia teknologi,
+                programming, dan pengembangan software.
+                Saya senang mempelajari hal baru dan
+                mengembangkan kemampuan di bidang IT.
+            </p>
+
+            <a href="#about" class="btn">
+                Kenali Saya
+            </a>
+
+        </div>
+
+        <div class="profile">
+            <img src="c:\Users\HP\Downloads\foto.jpg.jpeg"
+                 alt="Foto Adhi Guna"
+                 class="profile-img">
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">
+            Tentang <span>Saya</span>
+        </h2>
+
+        <div class="about-card">
+
+            <p>
+                saya adalah seorang mahasiswa yang tertarik
+                dengan perkembangan teknologi.
+                Saat ini saya sedang mempelajari dasar
+                pemrograman dan ingin terus berkembang
+              
+            </p>
+
+            <div class="biodata">
+
+                <div>
+                    <strong>Nama:</strong><br>
+                    Adhi Guna wijaya
+                </div>
+
+                <div>
+                    <strong>Status:</strong><br>
+                    Pelajar/mahasiswa
+                </div>
+
+                <div>
+                    <strong>Bidang:</strong><br>
+                    informatika
+                </div>
+
+                <div>
+                    <strong>Minat:</strong><br>
+                    Programming
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skill">
+
+        <h2 class="section-title">
+            Minat dan <span>Keahlian</span>
+        </h2>
+
+        <div class="skill-container">
+
+            <div class="skill-card">
+                <h3>HTML & CSS</h3>
+                <p>
+                    Mempelajari pembuatan struktur
+                    dan desain website.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>
+                    Mempelajari logika pemrograman
+                    dan pembuatan program.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>C++</h3>
+                <p>
+                    Mempelajari dasar bahasa
+                    pemrograman C++.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">
+            Hubungi <span>Saya</span>
+        </h2>
+
+        <p>
+            Terima kasih telah mengunjungi website pribadi saya.
+        </p>
+
+        <a href="mailto:wijayaadhiguna77@gmail.comm"
+           class="btn">
+            Kirim Email
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Adhi Guna.
+            Personal Website.
+        </p>
+    </footer>
+
+</body>
+</html>
